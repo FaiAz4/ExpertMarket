@@ -1,93 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ExpertMarket — AI Recommendations</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExpertMarket — AI Recommendations</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles_ai.css">
 </head>
 <body data-page="ai">
-<nav class="sidebar">
-  <div class="sidebar-logo">
-    <div class="logo-text">EM</div>
-    <div class="logo-sub">ExpertMarket</div>
-  </div>
-  <div class="nav-section">
-    <a class="nav-item" href="expertmarket.html"><span>Home</span></a>
-    <a class="nav-item" href="dashboard.html"><span>Dashboard</span></a>
-  </div>
-  <div class="nav-section">
-    <div class="nav-label">Explore</div>
-    <a class="nav-item" href="profile.html"><span>Expert Profile</span></a>
-    <a class="nav-item" href="stock.html"><span>Expert Stock</span></a>
-    <a class="nav-item" href="category.html"><span>Categories</span></a>
-    <a class="nav-item" href="review.html"><span>Reviews</span></a>
-  </div>
-  <div class="nav-section">
-    <div class="nav-label">My Account</div>
-    <a class="nav-item" href="ai.html"><span>AI Picks</span></a>
-    <a class="nav-item" href="portfolio.html"><span>Portfolio</span></a>
-    <a class="nav-item" href="ipo.html"><span>Join as Expert</span></a>
-    <a class="nav-item" href="trust.html"><span>Trust and Safety</span></a>
-  </div>
-  <div class="sidebar-bottom">
-    <div class="user-pill">
-      <div class="avatar"></div>
-      <div>
-        <div class="user-name">Alex K.</div>
-        <div class="user-balance">£2,450</div>
+
+  <div id="navbar-container"></div>
+
+  <div class="main">
+  <div id="ticker-container"></div>
+
+    <div class="page active" id="ai">
+      <div class="topbar">
+        <div class="page-title-wrap">
+          <h1 class="page-title">AI Recommendations</h1>
+
+          <div class="info-hover-wrap">
+            <button class="info-icon" type="button" aria-label="About Page">?</button>
+
+            <div class="info-popup">
+              <div class="info-popup-title">What are AI Recommendations?</div>
+              <div class="info-popup-text">
+                ExpertMarket makes expert-led investing easier to understand. Below will provide both simple recommendations and plain English explanations, alongside stronger market signals and broader strategic guidance.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-2 ai-grid-top">
+        <div class="card">
+          <div class="section-title">Build Your AI Recommendation Profile</div>
+          <div class="divider"></div>
+
+          <div class="form-field">
+            <label class="form-label" for="userType">Investment Experience</label>
+            <select id="userType" class="form-select">
+              <option value="">Select your experience level</option>
+              <option value="beginner">Beginner — first time investing</option>
+              <option value="trader">Intermediate — some market experience</option>
+              <option value="expert">Advanced — active trader</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="cityInput">City</label>
+            <input
+              id="cityInput"
+              class="form-input"
+              type="text"
+              placeholder="Enter your city e.g. London"
+            >
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="investmentGoal">Investment Goal</label>
+            <select id="investmentGoal" class="form-select">
+              <option value="">Select your goal</option>
+              <option value="steady">Low Risk / Steady Growth</option>
+              <option value="momentum">Trend Chasing / Momentum</option>
+              <option value="longterm">Long-Term Conviction</option>
+              <option value="niche">Discover Niche Experts</option>
+              <option value="local">Local Expertise Only</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Cuisine / Sector Interests</label>
+            <div class="pill-select">
+              <div class="pill-opt" onclick="togglePill(this)">Japanese</div>
+              <div class="pill-opt" onclick="togglePill(this)">Indian</div>
+              <div class="pill-opt" onclick="togglePill(this)">Italian</div>
+              <div class="pill-opt" onclick="togglePill(this)">Fine Dining</div>
+              <div class="pill-opt" onclick="togglePill(this)">Street Food</div>
+              <div class="pill-opt" onclick="togglePill(this)">Fusion</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary ai-generate-btn" onclick="generateAIPicks()">
+            Generate AI Picks
+          </button>
+
+          <p class="info-tip ai-input-note">
+            Enter a user type, city, and at least one interest to unlock the AI recommendations.
+          </p>
+        </div>
+
+        <div class="ai-block">
+          <div class="ai-label">
+            <div class="ai-dot"></div>
+            Get Started
+          </div>
+          <p class="ai-text">
+            Enter your details and interests to get personalised AI-driven expert recommendations tailored to your investing style and goals. 
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="ai-mini-points">
+            <div class="ai-mini-point"><span class="badge badge-purple">1</span><span>Select your investment experience, goals and interests</span></div>
+            <div class="ai-mini-point"><span class="badge badge-purple">2</span><span>View tailored recommendations</span></div>
+            <div class="ai-mini-point"><span class="badge badge-purple">3</span><span>Make informed investments</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="aiResults" class="ai-results-hidden">
+        <div class="ai-block ai-block-summary">
+          <div class="ai-label">
+            <div class="ai-dot"></div>
+            In Simple Terms
+          </div>
+          <div id="plainEnglishText" class="ai-text"></div>
+        </div>
+
+        <div class="ai-block ai-block-analysis">
+          <div class="ai-label">
+            <div class="ai-dot"></div>
+            AI Analysis
+          </div>
+          <div id="aiAnalysisText" class="ai-text"></div>
+        </div>
+
+        <div class="grid grid-2 ai-results-grid">
+          <div class="card">
+            <div class="section-header">
+              <div class="section-title">Recommended Experts</div>
+              <span class="badge badge-green">Live Match</span>
+            </div>
+            <div id="expertRecommendations"></div>
+          </div>
+
+          <div class="card">
+            <div class="section-header">
+              <div class="section-title">AI Starter Portfolio</div>
+              <span class="badge badge-purple">Generated</span>
+            </div>
+            <div id="starterPortfolio"></div>
+          </div>
+        </div>
+
+        <div class="grid grid-2 ai-results-grid">
+          <div class="card">
+            <div class="section-header">
+              <div class="section-title">Suggested Diversification</div>
+              <span class="badge badge-blue">Portfolio View</span>
+            </div>
+            <div id="diversificationText" class="ai-text"></div>
+          </div>
+
+          <div class="card">
+            <div class="section-header">
+              <div class="section-title">Why These Picks?</div>
+              <span class="badge badge-gold">Explainable AI</span>
+            </div>
+            <div id="whyPicksText" class="ai-text"></div>
+          </div>
+        </div>
+
+        <div class="card ai-market-card">
+          <div class="section-header">
+            <div class="section-title">How This Market Works</div>
+            <span class="badge badge-red">Market Mechanics</span>
+          </div>
+
+          <div class="grid grid-4 ai-market-grid">
+            <div class="ai-market-box">
+              <div class="card-title">Asset Traded</div>
+              <div class="ai-market-text">Shares in expert credibility, performance, and influence within niche sectors.</div>
+            </div>
+            <div class="ai-market-box">
+              <div class="card-title">Buyers</div>
+              <div class="ai-market-text">Investors seeking early access to trusted, expert-led market insight.</div>
+            </div>
+            <div class="ai-market-box">
+              <div class="card-title">Sellers</div>
+              <div class="ai-market-text">Experts monetising their knowledge, credibility, and market performance.</div>
+            </div>
+            <div class="ai-market-box">
+              <div class="card-title">Price Drivers</div>
+              <div class="ai-market-text">Demand, expert track record, trust signals, niche relevance, and sector momentum.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</nav>
-<div class="main">
-<div class="ticker-wrap" id="ticker" style="display:none">
-  <div class="ticker-inner">
-    <span class="tick-item"><span class="tick-name">YUKI.J</span> <span class="up">£142.50 ▲2.4%</span></span>
-    <span class="tick-item"><span class="tick-name">MARCO.F</span> <span class="up">£98.20 ▲1.1%</span></span>
-    <span class="tick-item"><span class="tick-name">CLAIRE.B</span> <span class="down">£67.80 ▼0.8%</span></span>
-    <span class="tick-item"><span class="tick-name">RAJAN.K</span> <span class="up">£211.00 ▲3.7%</span></span>
-    <span class="tick-item"><span class="tick-name">SOFIA.G</span> <span class="down">£55.40 ▼2.1%</span></span>
-  </div>
-</div>
-<div class="page active" id="ai">
-  <div class="topbar"><h1 class="page-title">AI Recommendations</h1></div>
-  <div class="grid grid-2">
-    <div class="card">
-      <div class="section-title" style="margin-bottom:16px">Tell Us Your Preferences</div>
-      <div class="pill-select" id="cuisine-pills">
-        <div class="pill-opt selected" onclick="togglePill(this)">Japanese</div>
-        <div class="pill-opt" onclick="togglePill(this)">Indian</div>
-        <div class="pill-opt selected" onclick="togglePill(this)">Italian</div>
-      </div>
-    </div>
-    <div class="ai-block"><div class="ai-label"><div class="ai-dot"></div> AI Analysis</div><div class="ai-text">Based on your interests and risk appetite, AI identified high-conviction picks and index positions.</div></div>
-  </div>
-</div>
-</div>
-<script>
-(function initPage() {
-  const id = document.body.dataset.page;
-  const ticker = document.getElementById('ticker');
-  if (ticker) ticker.style.display = id === 'landing' ? 'none' : 'block';
-
-  const navMap = {
-    landing: 0, dashboard: 1, profile: 2, stock: 3, category: 4,
-    review: 5, ai: 6, portfolio: 7, ipo: 8, trust: 9
-  };
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.querySelectorAll('.nav-item')[navMap[id]]?.classList.add('active');
-})();
-
-function setTab(t) {
-  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-  document.getElementById('tab-' + t)?.classList.add('active');
-}
-
-function togglePill(el) {
-  el.classList.toggle('selected');
-}
-</script>
+  
+  <script src="navbar.js"></script>
+  <script src="ai.js"></script>
 </body>
 </html>
