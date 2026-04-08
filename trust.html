@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ExpertMarket — Trust & Verification</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExpertMarket — Trust & Verification</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="trust">
+
 <nav class="sidebar">
   <div class="sidebar-logo">
     <div class="logo-text">EM</div>
     <div class="logo-sub">ExpertMarket</div>
   </div>
+
   <div class="nav-section">
     <a class="nav-item" href="expertmarket.html"><span>Home</span></a>
     <a class="nav-item" href="dashboard.html"><span>Dashboard</span></a>
   </div>
+
   <div class="nav-section">
     <div class="nav-label">Explore</div>
     <a class="nav-item" href="profile.html"><span>Expert Profile</span></a>
@@ -24,6 +27,7 @@
     <a class="nav-item" href="category.html"><span>Categories</span></a>
     <a class="nav-item" href="review.html"><span>Reviews</span></a>
   </div>
+
   <div class="nav-section">
     <div class="nav-label">My Account</div>
     <a class="nav-item" href="ai.html"><span>AI Picks</span></a>
@@ -31,6 +35,7 @@
     <a class="nav-item" href="ipo.html"><span>Join as Expert</span></a>
     <a class="nav-item" href="trust.html"><span>Trust and Safety</span></a>
   </div>
+
   <div class="sidebar-bottom">
     <div class="user-pill">
       <div class="avatar"></div>
@@ -41,26 +46,344 @@
     </div>
   </div>
 </nav>
+
 <div class="main">
-<div class="ticker-wrap" id="ticker" style="display:none">
-  <div class="ticker-inner">
-    <span class="tick-item"><span class="tick-name">YUKI.J</span> <span class="up">£142.50 ▲2.4%</span></span>
-    <span class="tick-item"><span class="tick-name">MARCO.F</span> <span class="up">£98.20 ▲1.1%</span></span>
-    <span class="tick-item"><span class="tick-name">CLAIRE.B</span> <span class="down">£67.80 ▼0.8%</span></span>
-    <span class="tick-item"><span class="tick-name">RAJAN.K</span> <span class="up">£211.00 ▲3.7%</span></span>
-    <span class="tick-item"><span class="tick-name">SOFIA.G</span> <span class="down">£55.40 ▼2.1%</span></span>
+  <div class="ticker-wrap" id="ticker" style="display:none">
+    <div class="ticker-inner">
+      <span class="tick-item"><span class="tick-name">YUKI.J</span> <span class="up">£142.50 ▲2.4%</span></span>
+      <span class="tick-item"><span class="tick-name">MARCO.F</span> <span class="up">£98.20 ▲1.1%</span></span>
+      <span class="tick-item"><span class="tick-name">CLAIRE.B</span> <span class="down">£67.80 ▼0.8%</span></span>
+      <span class="tick-item"><span class="tick-name">RAJAN.K</span> <span class="up">£211.00 ▲3.7%</span></span>
+      <span class="tick-item"><span class="tick-name">SOFIA.G</span> <span class="down">£55.40 ▼2.1%</span></span>
+    </div>
+  </div>
+
+  <div class="page active" id="trust">
+    <div class="topbar">
+      <h1 class="page-title">Trust and Verification</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-outline">Policy</button>
+        <button class="btn btn-primary">Apply</button>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-bottom:24px">
+      <div class="card" style="text-align:center">
+        <div class="stat-value">99.2%</div>
+        <div class="stat-change up">+1.1%</div>
+        <div style="font-size:12px;color:var(--muted)">Fake Profile Detection Rate</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="stat-value">24/7</div>
+        <div class="stat-change mono">Live</div>
+        <div style="font-size:12px;color:var(--muted)">AI Monitoring</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="stat-value">2,418</div>
+        <div class="stat-change up">+186</div>
+        <div style="font-size:12px;color:var(--muted)">Verified Experts Live</div>
+      </div>
+    </div>
+
+    <div class="ai-block" style="margin-bottom:24px">
+      <div class="ai-label"><div class="ai-dot"></div> Trust System Statement</div>
+      <div class="ai-text">
+        Multi-layer verification combines identity checks, proof-of-knowledge requirements, behavioral monitoring, and transparent scoring logic to maintain trust across the market.
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-bottom:24px">
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">Verification Process</div>
+          <span class="badge badge-green">Required</span>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num done">1</div>
+          <div class="step-info">
+            <h4>Identity Verification</h4>
+            <p>Experts upload government ID, complete selfie matching, and confirm their email and phone number before they can apply to be listed.</p>
+          </div>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num done">2</div>
+          <div class="step-info">
+            <h4>Category Selection</h4>
+            <p>Applicants choose the niche they want to be traded in, such as restaurants, fashion, startups, nightlife, or local experiences.</p>
+          </div>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num active">3</div>
+          <div class="step-info">
+            <h4>Background Review</h4>
+            <p>The platform reviews public track record, consistency, and relevant social or professional credibility before approval.</p>
+          </div>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num todo">4</div>
+          <div class="step-info">
+            <h4>Approval to Trade</h4>
+            <p>Successful applicants receive a verified badge and become eligible to be ranked, followed, and traded on the platform.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">Proof of Knowledge</div>
+          <span class="badge badge-purple">Quality Filter</span>
+        </div>
+
+        <div class="expert-row">
+          <div class="expert-av a1">01</div>
+          <div class="expert-info">
+            <div class="expert-name">Portfolio Evidence</div>
+            <div class="expert-niche">Experts must provide links, recommendations, sample work, or previous expertise evidence.</div>
+          </div>
+        </div>
+
+        <div class="expert-row">
+          <div class="expert-av a2">02</div>
+          <div class="expert-info">
+            <div class="expert-name">Sample Judgement</div>
+            <div class="expert-niche">Applicants submit example opinions or calls which can be assessed for quality and reasoning.</div>
+          </div>
+        </div>
+
+        <div class="expert-row">
+          <div class="expert-av a3">03</div>
+          <div class="expert-info">
+            <div class="expert-name">Reference Signals</div>
+            <div class="expert-niche">Trusted endorsements from communities, groups, or users can strengthen verification.</div>
+          </div>
+        </div>
+
+        <div class="expert-row">
+          <div class="expert-av a4">04</div>
+          <div class="expert-info">
+            <div class="expert-name">Trial Visibility</div>
+            <div class="expert-niche">New experts may start with reduced exposure until they demonstrate reliable value on-platform.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-bottom:24px">
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">Anti-Fraud Checks</div>
+          <span class="badge badge-red">Live Monitoring</span>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Check</th>
+              <th>Use</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Duplicate account detection</td>
+              <td>Stops fake experts and repeat sign-ups</td>
+              <td><span class="badge badge-green">Active</span></td>
+            </tr>
+            <tr>
+              <td>Suspicious trading alerts</td>
+              <td>Flags coordinated pumps and abnormal spikes</td>
+              <td><span class="badge badge-green">Active</span></td>
+            </tr>
+            <tr>
+              <td>Linked account analysis</td>
+              <td>Detects connected devices, IPs, and trading rings</td>
+              <td><span class="badge badge-green">Active</span></td>
+            </tr>
+            <tr>
+              <td>Review abuse detection</td>
+              <td>Prevents fake review boosting and brigading</td>
+              <td><span class="badge badge-gold">Reviewing</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">AI Manipulation Detection</div>
+          <span class="badge badge-blue">Model Assisted</span>
+        </div>
+
+        <div class="activity-item">
+          <div class="act-dot" style="background:var(--accent3)"></div>
+          <div>
+            <div class="act-text">Language analysis checks for mass-generated expert content and synthetic reviews.</div>
+            <div class="act-time">Content integrity layer</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="act-dot" style="background:var(--accent)"></div>
+          <div>
+            <div class="act-text">Behavior monitoring identifies unusual posting and trading patterns inconsistent with real users.</div>
+            <div class="act-time">Anomaly detection</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="act-dot" style="background:var(--gold)"></div>
+          <div>
+            <div class="act-text">Similarity detection flags clusters of accounts attempting to boost one expert artificially.</div>
+            <div class="act-time">Cluster analysis</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="act-dot" style="background:var(--accent2)"></div>
+          <div>
+            <div class="act-text">Accounts found manipulating rankings can be down-ranked, restricted, or removed from trading surfaces.</div>
+            <div class="act-time">Enforcement action</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px">
+      <div class="section-header">
+        <div class="section-title">How Scores Are Calculated</div>
+        <span class="badge badge-gold">Transparent Logic</span>
+      </div>
+
+      <div class="grid grid-4" style="margin-bottom:20px">
+        <div>
+          <div class="card-title">Accuracy</div>
+          <div class="stat-value" style="font-size:22px">40%</div>
+          <div class="info-tip">How often an expert’s recommendations prove valuable over time.</div>
+        </div>
+        <div>
+          <div class="card-title">Consistency</div>
+          <div class="stat-value" style="font-size:22px">25%</div>
+          <div class="info-tip">Whether the quality of their calls remains stable across multiple posts.</div>
+        </div>
+        <div>
+          <div class="card-title">Trust Signals</div>
+          <div class="stat-value" style="font-size:22px">20%</div>
+          <div class="info-tip">Verification level, reports, moderation outcomes, and credibility checks.</div>
+        </div>
+        <div>
+          <div class="card-title">Engagement Quality</div>
+          <div class="stat-value" style="font-size:22px">15%</div>
+          <div class="info-tip">Real engagement from users rather than raw traffic or spam activity.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid grid-2">
+        <div>
+          <div class="card-title">Sample Expert Score</div>
+          <div class="expert-row">
+            <div class="expert-av a2">MJ</div>
+            <div class="expert-info">
+              <div class="expert-name">Maya Jones</div>
+              <div class="expert-niche">Food & Lifestyle Expert</div>
+              <div class="score-bar">
+                <div class="score-fill" style="width:88%; background:var(--accent)"></div>
+              </div>
+            </div>
+            <div class="expert-price">88/100</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card-title">Explanation</div>
+          <div class="ai-text">
+            Scores are updated using verified performance history, moderation outcomes, and engagement quality. Sudden suspicious spikes are dampened to reduce manipulation and preserve fair market pricing.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-bottom:24px">
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">Inactivity and Visibility</div>
+          <span class="badge badge-purple">Ranking Rules</span>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num done">1</div>
+          <div class="step-info">
+            <h4>0–14 Days Inactive</h4>
+            <p>Experts remain fully visible across recommendation and ranking surfaces.</p>
+          </div>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num active">2</div>
+          <div class="step-info">
+            <h4>15–30 Days Inactive</h4>
+            <p>Visibility begins to fall in trending modules and category recommendations.</p>
+          </div>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num todo">3</div>
+          <div class="step-info">
+            <h4>31–60 Days Inactive</h4>
+            <p>Experts lose active ranking strength and appear lower in discovery pages.</p>
+          </div>
+        </div>
+
+        <div class="verify-step">
+          <div class="step-num todo">4</div>
+          <div class="step-info">
+            <h4>60+ Days Inactive</h4>
+            <p>Profiles stay on the platform but are archived from top discovery until reactivated.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">Moderation Principles</div>
+          <span class="badge badge-green">Fairness</span>
+        </div>
+
+        <div class="review-box">
+          <div class="card-title">Visibility is reduced when:</div>
+          <ul style="padding-left:18px; font-size:13px; line-height:1.8; color:var(--text)">
+            <li>There is extended inactivity</li>
+            <li>Manipulation is detected</li>
+            <li>Misleading or low-quality content is repeated</li>
+            <li>Trust and safety reviews remain unresolved</li>
+          </ul>
+        </div>
+
+        <div class="review-box">
+          <div class="card-title">Visibility is protected when:</div>
+          <ul style="padding-left:18px; font-size:13px; line-height:1.8; color:var(--text)">
+            <li>Experts take short breaks</li>
+            <li>Posting frequency is low but quality stays high</li>
+            <li>New experts are still within the probation window</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-block">
+      <div class="ai-label"><div class="ai-dot"></div> Why this matters</div>
+      <div class="ai-text">
+        Trust is the core of ExpertMarket. Verification protects users from fake experts, proof-of-knowledge improves quality, anti-fraud checks preserve pricing integrity, and visibility rules ensure the market rewards reliable participation rather than manipulation.
+      </div>
+    </div>
   </div>
 </div>
-<div class="page active" id="trust">
-  <div class="topbar"><h1 class="page-title">Trust and Verification</h1></div>
-  <div class="grid grid-3" style="margin-bottom:24px">
-    <div class="card" style="text-align:center"><div style="font-size:32px;margin-bottom:8px">99.2%</div><div style="font-size:12px;color:var(--muted)">Fake Profile Detection Rate</div></div>
-    <div class="card" style="text-align:center"><div style="font-size:32px;margin-bottom:8px">24/7</div><div style="font-size:12px;color:var(--muted)">AI Monitoring</div></div>
-    <div class="card" style="text-align:center"><div style="font-size:32px;margin-bottom:8px">2,418</div><div style="font-size:12px;color:var(--muted)">Verified Experts Live</div></div>
-  </div>
-  <div class="ai-block"><div class="ai-label"><div class="ai-dot"></div> Trust System Statement</div><div class="ai-text">Multi-layer verification combines credential checks, behavior analysis, and market accountability.</div></div>
-</div>
-</div>
+
 <script>
 (function initPage() {
   const id = document.body.dataset.page;
@@ -71,6 +394,7 @@
     landing: 0, dashboard: 1, profile: 2, stock: 3, category: 4,
     review: 5, ai: 6, portfolio: 7, ipo: 8, trust: 9
   };
+
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.querySelectorAll('.nav-item')[navMap[id]]?.classList.add('active');
 })();
